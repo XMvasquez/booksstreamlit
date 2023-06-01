@@ -6,7 +6,7 @@ import plotly.express as px
 import os
 
 # mongodb url 
-uri = os.environ.get('URI')
+uri = "mongodb+srv://beto:admin@cluster0.xtwgr69.mongodb.net/?retryWrites=true&w=majority"
 
 # Connect to meme MongoDB database
 try:
