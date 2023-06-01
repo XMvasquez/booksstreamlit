@@ -1,2 +1,4 @@
 streamlit
 pymongo
+plotly.express
+pandas
