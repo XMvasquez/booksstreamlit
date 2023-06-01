@@ -31,5 +31,5 @@ jobs:
       env:
         URI: ${{ secrets.URI }}
       run: |
-        python -c "import os; os.environ['URI'] = '${URI}'; print(os.environ['URI'])"
+        python -c "import os; os.environ('URI') = '${URI}'; print(os.environ('URI'))"
         python streamlit-mongo.py
