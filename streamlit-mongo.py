@@ -5,7 +5,7 @@ import streamlit as st
 import plotly.express as px
 
 # mongodb url 
-uri = "mongodb+srv://beto:admin@cluster0.xtwgr69.mongodb.net/?retryWrites=true&w=majority"
+uri = ${{ secrets.URI }}
 
 # Connect to meme MongoDB database
 try:
