@@ -25,8 +25,8 @@ jobs:
         pip install -r requirements.txt
 
     - name: Set environment variable
-      run: |
-        echo "URI='${{ secrets.URI }}'" >> $GITHUB_ENV
+      env:
+        URI: ${{ secrets.URI }}
 
     - name: Run Python script
       run: |
