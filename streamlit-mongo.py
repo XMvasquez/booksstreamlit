@@ -25,26 +25,26 @@ st.title("TKD red social")
 # Pull data from the collection.
 # Uses st.cache_data to only rerun when the query changes or after 10 min.
 @st.cache_data(ttl=600)
-def getReactions():
+def getReactions(db):
     items = db.tkdapp_reactions.find()
     items = list(items)  # make hashable for st.cache_data
     return items
 
-def getComments():
+def getComments(db):
     items = db.tkdapp_comments.find()
     items = list(items)  # make hashable for st.cache_data
     return items
 
-def getReactionsSummary():
+def getReactionsSummary(db):
     items = db.tkdapp_reactions_sumary.find()
     items = list(items)  # make hashable for st.cache_data
     return items
 
-dataReactions = getReactions()
+dataReactions = getReactions(db)
 
-dataComments = getComments()
+dataComments = getComments(db)
 
-dataReactionsSumary = getReactionsSummary()
+dataReactionsSumary = getReactionsSummary(db)
 
 st.sidebar.title("Heriberto Arriola Peztña")
 st.sidebar.write("s20006737")
