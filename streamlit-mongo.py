@@ -3,9 +3,10 @@ from pymongo.server_api import ServerApi
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+import os
 
 # mongodb url 
-uri = ${{ secrets.URI }}
+uri = os.environ.get('URI')
 
 # Connect to meme MongoDB database
 try:
