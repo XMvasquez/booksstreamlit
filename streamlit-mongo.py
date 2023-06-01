@@ -6,7 +6,7 @@ import plotly.express as px
 import os
 
 # mongodb url 
-uri = "mongodb+srv://beto:admin@cluster0.xtwgr69.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://ximenavasquez3410:Vasquez3410@cluster0.qgtpg76.mongodb.net/?retryWrites=true&w=majority"
 
 # Connect to meme MongoDB database
 try:
@@ -21,7 +21,7 @@ except:
 
 # streamlit run streamlit-mongo.py --server.enableCORS false --server.enableXsrfProtection false
 
-st.title("TKD red social")
+st.title("Books social media")
 # Pull data from the collection.
 # Uses st.cache_data to only rerun when the query changes or after 10 min.
 @st.cache_data(ttl=600)
@@ -40,17 +40,16 @@ def getReactionsSummary(_db):
     items = list(items)  # make hashable for st.cache_data
     return items
 
-dataReactions = getReactions(db)
+dataReactions = getReactions(db) 
 
 dataComments = getComments(db)
 
 dataReactionsSumary = getReactionsSummary(db)
 
-st.sidebar.title("Heriberto Arriola Peztña")
-st.sidebar.write("s20006737")
+st.sidebar.title("Ximena Vasquez")
+st.sidebar.write("s20006727")
 st.sidebar.markdown("___")
-st.sidebar.write("Visita la pagina:\n\n https://tkdappmaster-service-btoarriola2-btoarriola.cloud.okteto.net/")
-st.sidebar.markdown("___")
+
 
 
 st.subheader("Gráficos")
