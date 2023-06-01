@@ -24,10 +24,8 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Set environment variable
+    - name: Run Python script
       env:
         URI: ${{ secrets.URI }}
-
-    - name: Run Python script
       run: |
         python streamlit-mongo.py
